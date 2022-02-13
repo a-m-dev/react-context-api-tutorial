@@ -1,9 +1,6 @@
 import ProductActions from "./ProductActions";
 
 const Product = ({ product, setSelectedProducts }) => {
-  const handleAddToBasket = () =>
-    setSelectedProducts((prevItems) => [...prevItems, product]);
-
   return (
     <div className="product">
       <div className="product__info">
@@ -15,7 +12,7 @@ const Product = ({ product, setSelectedProducts }) => {
       </div>
       <ProductActions
         product={product}
-        setSelectedProducts={handleAddToBasket}
+        setSelectedProducts={setSelectedProducts}
       />
     </div>
   );
