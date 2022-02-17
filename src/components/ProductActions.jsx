@@ -1,4 +1,9 @@
-const ProductActions = ({ product, setSelectedProducts }) => {
+import { useContext } from "react";
+import { ShoppingContext } from "../App";
+
+const ProductActions = ({ product }) => {
+  const { setSelectedProducts } = useContext(ShoppingContext);
+
   const handleAddToBasket = () =>
     setSelectedProducts((prevItems) => [...prevItems, product]);
 

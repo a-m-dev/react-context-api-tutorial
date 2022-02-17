@@ -8,13 +8,13 @@ const Menu = (props) => (
   </ul>
 );
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className="header">
       <h1>My Shop</h1>
       <section className="header__menu">
         <Menu />
-        <Basket selectedProducts={props.selectedProducts} />
+        <Basket />
       </section>
     </header>
   );

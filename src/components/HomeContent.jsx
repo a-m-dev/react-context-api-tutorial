@@ -15,18 +15,15 @@ const HomeContentHeader = () => {
   );
 };
 
-const HomeContent = ({ products, setSelectedProducts, selectedProducts }) => {
+const HomeContent = () => {
   return (
     <main className="home">
       <section className="home__content">
         <HomeContentHeader />
-        <ProductList
-          products={products}
-          setSelectedProducts={setSelectedProducts}
-        />
+        <ProductList />
       </section>
 
-      <Sidebar selectedProducts={selectedProducts} />
+      <Sidebar />
     </main>
   );
 };

@@ -1,5 +1,10 @@
-const Sidebar = (props) => {
-  const totalPrice = props.selectedProducts.reduce(
+import { useContext } from "react";
+import { ShoppingContext } from "../App";
+
+const Sidebar = () => {
+  const { selectedProducts } = useContext(ShoppingContext);
+
+  const totalPrice = selectedProducts.reduce(
     (acc, curr) => acc + curr.price,
     0
   );

@@ -1,6 +1,6 @@
 import ProductActions from "./ProductActions";
 
-const Product = ({ product, setSelectedProducts }) => {
+const Product = ({ product }) => {
   return (
     <div className="product">
       <div className="product__info">
@@ -10,10 +10,7 @@ const Product = ({ product, setSelectedProducts }) => {
         </div>
         <p>{product.description}</p>
       </div>
-      <ProductActions
-        product={product}
-        setSelectedProducts={setSelectedProducts}
-      />
+      <ProductActions product={product} />
     </div>
   );
 };
